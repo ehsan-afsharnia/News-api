@@ -1,5 +1,7 @@
 // -------------|class|------------------
 
+const ui = new UI()
+
 
 
 
@@ -51,7 +53,8 @@ function search(e) {
     if (newsName !== '' || country !== '' || category !== '') {
         console.log('correct');
     } else {
-        console.log('error');
+        
+        ui.printMessage('Please select at least one field', 'text-center alert alert-danger mt-4')
     }
 
     
