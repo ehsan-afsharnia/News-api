@@ -15,11 +15,29 @@ class UI {
 
     //Show message into the HTML
     document.querySelector('#message').appendChild(div)
+
+
+    // Remove message after 2 second
    
+    setTimeout(() => {
+        this.removeMessage()
+    }, 3000);
 
     }
 
-    removeMessage()
+   
+    // Remove message after showing into the HTML
+
+    removeMessage(){
+
+        const alert = document.querySelector('.alert')
+        if (alert) {
+        
+         alert.remove()
+               
+         }
+
+    }
 
 
 

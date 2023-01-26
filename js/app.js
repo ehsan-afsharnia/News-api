@@ -1,6 +1,7 @@
 // -------------|class|------------------
 
 const ui = new UI()
+const newsAPI = new News()
 
 
 
@@ -51,7 +52,7 @@ function search(e) {
     const category = document.querySelector('#category').value
 
     if (newsName !== '' || country !== '' || category !== '') {
-        console.log('correct');
+        newsAPI.queryAPI(newsName,country, category)
     } else {
         
         ui.printMessage('Please select at least one field', 'text-center alert alert-danger mt-4')
